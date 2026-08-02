@@ -1,0 +1,528 @@
+ 
+
+
+ <!--product html-->
+
+ 
+ 
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LunaRose</title>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+   <header class="header">
+
+    <nav class="navbar">
+
+       
+      <div class="logo">
+           <a href="index.html" class="logo-link">
+             <img src="../assets/images/logo.png"  alt="LunaRose Logo">
+             <span class="logo-text">Luna<span class="rose">Rose</span>
+             </span>
+           </a>
+     </div>
+
+      <div class="search">
+           <input
+        type="text"
+        class="search-input"
+        placeholder="Tell us what you're looking for..."
+    >
+    <button class="search-btn">
+       <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+     </div>
+
+      <div class="nav-actions">
+          <a href="login.html" class="login-link-1">Login</a>
+
+          <a href="#" class="register-link">Register</a>
+
+          <a href="favorites.html" class="favorite-icon">
+
+    <i class="fa-solid fa-heart"></i>
+
+</a>
+
+    <a href="cart.html" class="cart-btn">
+
+       <i class="fa-solid fa-cart-shopping"></i>
+
+     </a>
+
+     
+        </div>
+
+       
+
+
+    </nav>
+
+   </header>
+
+<main>
+
+    <!-- Breadcrumb -->
+
+    <section class="breadcrumb">
+
+        <a href="index.html">Home</a>
+
+        <span>/</span>
+
+        <a href="#" id="breadcrumb-category">Category</a>
+
+        <span>/</span>
+
+        <span id="breadcrumb-name">Product</span>
+
+    </section>
+
+
+
+    <!-- Product Details -->
+
+    <section class="product-details">
+
+        <!-- Left -->
+
+        <div class="product-gallery">
+
+            <img
+                id="main-product-image"
+                src=""
+                alt="Product Image"
+                class="main-product-image"
+            >
+
+        </div>
+
+
+
+        <!-- Right -->
+
+        <div class="product-info-panel">
+
+            <span class="product-category" id="product-category">
+                Category
+            </span>
+
+            <h1 id="product-name">
+                Product Name
+            </h1>
+
+            <p class="product-price" id="product-price">
+                $0.00
+            </p>
+
+            <p class="product-description" id="product-description">
+                Product description will appear here.
+            </p>
+
+
+
+            <!-- Quantity -->
+
+            <div class="quantity-box">
+
+                <button id="minus-btn">−</button>
+
+                <input
+                    type="number"
+                    id="quantity-input"
+                    value="1"
+                    min="1"
+                >
+
+                <button id="plus-btn">+</button>
+
+            </div>
+
+
+
+            <!-- Buttons -->
+
+            <div class="product-buttons">
+
+                <button  class="details-btn">
+
+    <i class="fa-solid fa-circle-info"></i>
+
+    More Details
+
+</button>
+                  
+               
+                
+                <button class="favorite-btn" id="favorite-btn">
+
+    <i id="favorite-icon" class="fa-regular fa-heart"></i>
+
+    <span id="favorite-text">
+
+        Add to Favorites
+
+    </span>
+
+</button>
+
+                <button class="cart-button"
+                id="add-to-cart-btn">
+                    
+
+                    <i class="fa-solid fa-cart-shopping"></i>
+
+                    Add to Cart
+
+                </button>
+
+                <button class="buy-button"
+                id="buy-now-btn">
+
+                    Buy Now
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Related Products -->
+
+    <section class="related-products">
+
+        <div class="section-header">
+
+            <h2>You May Also Like</h2>
+
+        </div>
+
+        <div id="related-products-grid" class="products-grid">
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+
+
+
+
+   <!--=================================
+            FOOTER
+==================================-->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2 class="footer-logo">
+
+                Luna<span class="rose">Rose</span>
+
+            </h2>
+
+            <p>
+
+                Bringing nature closer to every home with premium plants,
+                carefully selected to inspire greener and healthier living.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="../html/index.html">Home</a></li>
+
+                <li><a href="../html/profile.html">Profile</a></li>
+
+                <li><a href="../html/favorites.html">Favorites</a></li>
+
+                <li><a href="../html/cart.html">Cart</a></li>
+
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="../html/ornamental.html">Ornamental</a></li>
+
+                <li><a href="../html/medicinal.html">Medicinal</a></li>
+
+                <li><a href="../html/seedlings.html">Seedlings</a></li>
+
+                <li><a href="../html/seeds.html">Seeds</a></li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>Get in touch</h3>
+
+            <p>
+    Email :
+    <a href="mailto:info@lunarose.com">
+        info@lunarose.com
+       </a>
+    </p>
+
+           <p>
+    Phone :
+    <a href="tel:+213555000000">
+        +213 555 000 000
+    </a>
+</p>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        
+        Designed & Developed by Rahmani Abdallah • © 2026 LunaRose
+
+    </div>
+
+</footer>
+
+      <div id="toast" class="toast">
+
+    <i class="fa-solid fa-circle-check"></i>
+
+    <span id="toast-message">
+
+        Product added successfully!
+
+    </span>
+
+</div>
+
+
+<div class="checkout-modal-overlay" id="buy-modal">
+
+    <div class="checkout-modal">
+
+        <i class="fa-solid fa-circle-check checkout-modal-icon"></i>
+
+        <h2>
+
+            Coming Soon! 
+
+        </h2>
+
+        <p>
+
+            Thank you for choosing LunaRose.
+
+            <br><br>
+
+            Online purchasing will be available
+            in the next version.
+
+            <br><br>
+
+            We look forward to serving you soon!
+
+        </p>
+
+        <button id="buy-ok-btn">
+
+            OK
+
+        </button>
+
+    </div>
+
+</div>
+
+
+
+
+    
+
+
+<!--=================================
+        PRODUCT DETAILS MODAL
+==================================-->
+
+     <div id="details-modal" class="details-modal">
+
+      <div class="details-modal-content">
+
+        <button id="close-details-modal" class="close-details-modal">
+
+            <i class="fa-solid fa-xmark"></i>
+
+        </button>
+
+        <h2 id="modal-product-name">
+
+            Hybrid Tea Rose
+
+        </h2>
+
+        <div class="details-grid">
+
+            <div class="detail-item">
+
+                <span>Scientific Name</span>
+
+                <p id="modal-scientific-name"></p>
+
+            </div>
+
+            <div class="detail-item">
+
+                <span>Origin</span>
+
+                <p id="modal-origin"></p>
+
+            </div>
+
+            <div class="detail-item">
+
+                <span>Family</span>
+
+                <p id="modal-family"></p>
+
+            </div>
+
+            <div class="detail-item">
+
+                <span>Plant Type</span>
+
+                <p id="modal-type"></p>
+
+            </div>
+
+            <div class="detail-item">
+
+                <span>Sunlight</span>
+
+                <p id="modal-sunlight"></p>
+
+            </div>
+
+            <div class="detail-item">
+
+                <span>Watering</span>
+
+                <p id="modal-watering"></p>
+
+            </div>
+
+            <div class="detail-item">
+
+                <span>Difficulty</span>
+
+                <p id="modal-difficulty"></p>
+
+            </div>
+
+            <div class="detail-item">
+
+                <span>Height</span>
+
+                <p id="modal-height"></p>
+
+            </div>
+
+        </div>
+
+         <div class="detail-description">
+
+            <h3>Description</h3>
+
+            <p id="modal-description"></p>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,525 @@
+ 
+ 
+ <!-----------------INDEX HTMLLLLLLLLLLLLLLL-->
+ 
+ 
+ <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LunaRose</title>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+   <header class="header">
+
+    <nav class="navbar">
+
+       
+      <div class="logo">
+           <a href="index.html" class="logo-link">
+             <img src="../assets/images/logo.png"  alt="LunaRose Logo">
+             <span class="logo-text">Luna<span class="rose">Rose</span>
+             </span>
+           </a>
+     </div>
+
+      <div class="search">
+           <input
+        type="text"
+        class="search-input"
+        placeholder="Tell us what you're looking for..."
+    >
+    <button class="search-btn">
+       <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+     </div>
+
+      <div class="nav-actions">
+          <a href="login.html" class="login-link-1">Login</a>
+
+          <a href="register.html" class="register-link">Register</a>
+
+          <a href="favorites.html" class="favorite-icon">
+
+     <i class="fa-solid fa-heart"></i>
+
+     </a>
+
+     <a href="cart.html" class="cart-btn">
+
+       <i class="fa-solid fa-cart-shopping"></i>
+
+     </a>
+
+     
+        </div>
+
+       
+
+
+    </nav>
+
+   </header>
+
+    
+    
+       <!-- ==================== Hero Section ==================== -->
+
+     <section class="hero">
+
+     <!-- Background Videos -->
+     <div class="hero-videos">
+
+        <video class="hero-video active" muted playsinline>
+            <source src="../assets/videos/hero-video-1.mp4" type="video/mp4">
+        </video>
+
+        <video class="hero-video" muted playsinline>
+            <source src="../assets/videos/hero-video-2.mp4" type="video/mp4">
+        </video>
+
+        <video class="hero-video" muted playsinline>
+            <source src="../assets/videos/hero-video-3.mp4" type="video/mp4">
+        </video>
+
+     </div>
+
+     <!-- Dark Overlay -->
+     <div class="hero-overlay"></div>
+
+     <!-- Hero Content -->
+     <div class="hero-content">
+
+        <h1 class="hero-title">
+            Bring Nature Into Your Home
+        </h1>
+
+        <p class="hero-description">
+            Discover premium indoor and outdoor plants carefully selected to transform every space into a peaceful green sanctuary.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#" class="hero-btn primary-btn">
+                Shop Now
+            </a>
+
+            <a href="#" class="hero-btn secondary-btn">
+                Explore Categories
+            </a>
+
+        </div>
+
+     </div>
+
+     <!-- Navigation Arrows -->
+
+     <button class="hero-arrow hero-arrow-left">
+        &#10094;
+     </button>
+
+     <button class="hero-arrow hero-arrow-right">
+        &#10095;
+     </button>
+
+</section>
+    
+    <!-- ==================== Products Preview ==================== -->
+
+<section class="products-preview">
+
+    <div class="intro-section">
+
+        <h2 class="intro-title">
+            Every Plant Tells a Story.
+        </h2>
+
+        <p class="intro-description">
+            Explore our carefully selected collection of premium plants,
+            designed to bring beauty, freshness and tranquility into every
+            home. Whether you're looking for elegant indoor greenery,
+            medicinal herbs, healthy seedlings or quality seeds, you'll find
+            the perfect choice for your next green journey.
+        </p>
+
+    </div>
+
+    
+<!-- ============================================================
+ 
+                          Products  cards
+==================================================================-->
+
+
+<!--==================== Ornamental Plants ====================-->
+
+<div class="category-section">
+
+    <div class="category-header">
+
+        <div>
+
+            <h2 class="category-title">Ornamental Plants</h2>
+
+            <p class="category-subtitle">
+                Elegant plants that transform every corner into a relaxing green space.
+            </p>
+
+        </div>
+
+        <a href="../html/ornamental.html" class="view-all">View All →</a>
+
+    </div>
+
+    <div class="products-grid" id="ornamental-products"></div>
+
+</div>
+
+<!--==================== Medicinal Plants ====================-->
+
+<div class="category-section">
+
+    <div class="category-header">
+
+        <div>
+
+            <h2 class="category-title">Medicinal Plants</h2>
+
+            <p class="category-subtitle">
+                Natural healing plants carefully selected for wellness and everyday use.
+            </p>
+
+        </div>
+
+        <a href="../html/medicinal.html" class="view-all">View All →</a>
+
+    </div>
+
+    <div class="products-grid" id="medicinal-products"></div>
+
+</div>
+
+<!--==================== Seedlings ====================-->
+
+<div class="category-section">
+
+    <div class="category-header">
+
+        <div>
+
+            <h2 class="category-title">Seedlings</h2>
+
+            <p class="category-subtitle">
+                Healthy young plants ready to grow into beautiful additions to your garden.
+            </p>
+
+        </div>
+
+        <a href="../html/seedlings.html" class="view-all">View All →</a>
+
+    </div>
+
+    <div class="products-grid" id="seedlings-products"></div>
+
+</div>
+
+<!--==================== Seeds ====================-->
+
+<div class="category-section">
+
+    <div class="category-header">
+
+        <div>
+
+            <h2 class="category-title">Seeds</h2>
+
+            <p class="category-subtitle">
+                Premium quality seeds for flowers, herbs and home gardening.
+            </p>
+
+        </div>
+
+        <a href="../html/seeds.html" class="view-all">View All →</a>
+
+    </div>
+
+    <div class="products-grid" id="seeds-products"></div>
+
+   </div>
+ 
+</section>
+
+<!-- ======================================
+            WHY CHOOSE LUNAROSE
+======================================= -->
+
+<section class="why-choose">
+
+    <div class="why-header">
+
+        <span class="why-subtitle">
+            WHY CHOOSE LUNAROSE
+        </span>
+
+        <h2 class="why-title">
+            Bringing Nature Closer,<br>
+            One Plant at a Time
+        </h2>
+
+        <p class="why-description">
+            Every plant in our collection is carefully selected to inspire greener
+            homes, healthier lifestyles, and beautiful spaces. From the moment you
+            choose a plant until it reaches your door, we focus on quality, care,
+            and a seamless shopping experience.
+        </p>
+
+    </div>
+
+    <div class="why-grid">
+
+        <!-- Card 1 -->
+
+        <article class="why-card">
+
+            <div class="why-icon">
+
+             <i class="fa-solid fa-seedling"></i>
+
+            </div>
+
+            <h3>
+
+                Premium Quality
+
+            </h3>
+
+            <p>
+
+                Every plant is handpicked to ensure freshness,
+                health, and long-lasting beauty.
+
+            </p>
+
+        </article>
+
+
+        <!-- Card 2 -->
+
+        <article class="why-card">
+
+            <div class="why-icon">
+
+              <i class="fa-solid fa-truck-fast"></i>
+
+            </div>
+
+            <h3>
+
+                Safe Delivery
+
+            </h3>
+
+            <p>
+
+                Secure packaging keeps every plant protected
+                throughout the entire delivery journey.
+
+            </p>
+
+        </article>
+
+
+        <!-- Card 3 -->
+
+        <article class="why-card">
+
+            <div class="why-icon">
+
+              <i class="fa-solid fa-shield-halved"></i>
+
+            </div>
+
+            <h3>
+
+                Secure Payment
+
+            </h3>
+
+            <p>
+
+                Shop with confidence using trusted and secure
+                payment methods for every purchase.
+
+            </p>
+
+        </article>
+
+
+        <!-- Card 4 -->
+
+        <article class="why-card">
+
+            <div class="why-icon">
+
+                 <i class="fa-solid fa-heart"></i>
+
+            </div>
+
+            <h3>
+
+                Plant Care Support
+
+            </h3>
+
+            <p>
+
+                Helpful care guides and expert tips help your
+                plants thrive for years to come.
+
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+     <!--=================================
+            FOOTER
+==================================-->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2 class="footer-logo">
+
+                Luna<span class="rose">Rose</span>
+
+            </h2>
+
+            <p>
+
+                Bringing nature closer to every home with premium plants,
+                carefully selected to inspire greener and healthier living.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="../html/index.html">Home</a></li>
+
+                <li><a href="../html/profile.html">Profile</a></li>
+
+                <li><a href="../html/favorites.html">Favorites</a></li>
+
+                <li><a href="../html/cart.html">Cart</a></li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="../html/ornamental.html">Ornamental</a></li>
+
+                <li><a href="../html/medicinal.html">Medicinal</a></li>
+
+                <li><a href="../html/seedlings.html">Seedlings</a></li>
+
+                <li><a href="../html/seeds.html">Seeds</a></li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>Get in touch</h3>
+
+            <p>
+    Email :
+    <a href="mailto:info@lunarose.com">
+        info@lunarose.com
+       </a>
+    </p>
+
+           <p>
+    Phone :
+    <a href="tel:+213555000000">
+        +213 555 000 000
+    </a>
+</p>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        
+        Designed & Developed by Rahmani Abdallah • © 2026 LunaRose
+
+    </div>
+
+</footer>
+
+
+
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+
+</html>
+

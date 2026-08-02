@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LunaRose</title>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+   <header class="header">
+
+    <nav class="navbar">
+
+       
+      <div class="logo">
+           <a href="index.html" class="logo-link">
+             <img src="../assets/images/logo.png"  alt="LunaRose Logo">
+             <span class="logo-text">Luna<span class="rose">Rose</span>
+             </span>
+           </a>
+     </div>
+
+      <div class="search">
+           <input
+        type="text"
+        class="search-input"
+        placeholder="Tell us what you're looking for..."
+    >
+    <button class="search-btn">
+       <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+     </div>
+
+      <div class="nav-actions">
+          <a href="login.html" class="login-link-1">Login</a>
+
+          <a href="register.html" class="register-link">Register</a>
+
+          <a href="favorites.html" class="favorite-icon">
+
+     <i class="fa-solid fa-heart"></i>
+
+     </a>
+
+     <a href="cart.html" class="cart-btn">
+
+       <i class="fa-solid fa-cart-shopping"></i>
+
+     </a>
+
+     
+        </div>
+
+       
+
+
+    </nav>
+
+   </header>
+
+    <main class="profile-page">
+
+    <!-- Profile Header -->
+    <section class="profile-header">
+
+        <div class="profile-avatar" id="profile-avatar">
+    <span id="avatar-initials"></span>
+</div>
+
+        <div class="profile-user-info">
+            <h1 id="profile-name">John Doe</h1>
+            <p id="profile-email">john@example.com</p>
+
+            <button class="edit-profile-btn">
+                <i class="fa-solid fa-pen"></i>
+                Edit Profile
+            </button>
+        </div>
+
+    </section>
+
+
+
+    <!-- Dashboard -->
+    <section class="profile-dashboard">
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-box"></i>
+
+            <h3>My Orders</h3>
+
+            <p>
+                View your previous & current orders.
+            </p>
+
+            <a href="orders.html">
+                Open
+            </a>
+
+        </div>
+
+
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-heart"></i>
+
+            <h3>Favorites</h3>
+
+            <p>
+                Browse all your favorite plants.
+            </p>
+
+            <a href="favorites.html">
+                Open
+            </a>
+
+        </div>
+
+
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-cart-shopping"></i>
+
+            <h3>Shopping Cart</h3>
+
+            <p>
+                Continue shopping from your saved cart.
+            </p>
+
+            <a href="cart.html">
+                Open
+            </a>
+
+        </div>
+
+
+
+        <div class="dashboard-card">
+
+            <i class="fa-solid fa-user-gear"></i>
+
+            <h3>Account Settings</h3>
+
+            <p>
+                Update your account information.
+            </p>
+
+            <a href="#">
+                Manage
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- Account Information -->
+
+    <section class="account-information">
+
+        <h2>
+            Account Information
+        </h2>
+
+        <div class="info-grid">
+
+            <div class="info-box">
+                <span>Full Name</span>
+                <p id="user-full-name">
+                    John Doe
+                </p>
+            </div>
+
+            <div class="info-box">
+                <span>Email Address</span>
+                <p id="user-email">
+                    john@example.com
+                </p>
+            </div>
+
+            <div class="info-box">
+                <span>Member Since</span>
+                <p id="member-date">
+                    July 2026
+                </p>
+            </div>
+
+            <div class="info-box">
+                <span>Account Status</span>
+                <p class="status-active">
+                    Active
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    
+
+</main>
+
+
+   
+     <!--=================================
+            FOOTER
+==================================-->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2 class="footer-logo">
+
+                Luna<span class="rose">Rose</span>
+
+            </h2>
+
+            <p>
+
+                Bringing nature closer to every home with premium plants,
+                carefully selected to inspire greener and healthier living.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="../html/index.html">Home</a></li>
+
+                <li><a href="../html/profile.html">Profile</a></li>
+
+                <li><a href="../html/favorites.html">Favorites</a></li>
+
+                <li><a href="../html/cart.html">Cart</a></li>
+
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="../html/ornamental.html">Ornamental</a></li>
+
+                <li><a href="../html/medicinal.html">Medicinal</a></li>
+
+                <li><a href="../html/seedlings.html">Seedlings</a></li>
+
+                <li><a href="../html/seeds.html">Seeds</a></li>
+            </ul>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>Get in touch</h3>
+
+            <p>
+    Email :
+    <a href="mailto:info@lunarose.com">
+        info@lunarose.com
+       </a>
+    </p>
+
+           <p>
+    Phone :
+    <a href="tel:+213555000000">
+        +213 555 000 000
+    </a>
+</p>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        
+        Designed & Developed by Rahmani Abdallah • © 2026 LunaRose
+
+    </div>
+
+</footer>
+
+
+
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+
+</body>
+
+
+</html>
+

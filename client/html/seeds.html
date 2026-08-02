@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>LunaRose</title>
+
+
+    <link rel="stylesheet" href="../css/style.css">
+
+<link
+rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+/>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+
+<body>
+
+    <!-- Navbar -->
+   <header class="header">
+
+    <nav class="navbar">
+
+       
+      <div class="logo">
+           <a href="index.html" class="logo-link">
+             <img src="../assets/images/logo.png"  alt="LunaRose Logo">
+             <span class="logo-text">Luna<span class="rose">Rose</span>
+             </span>
+           </a>
+     </div>
+
+      <div class="search">
+           <input
+        type="text"
+        class="search-input"
+        placeholder="Tell us what you're looking for..."
+    >
+    <button class="search-btn">
+       <i class="fa-solid fa-magnifying-glass"></i>
+    </button>
+
+     </div>
+
+      <div class="nav-actions">
+
+         <a href="login.html" class="login-link-1">Login</a>
+    <a href="#" class="register-link">Register</a>
+
+    <a href="favorites.html" class="favorite-icon">
+
+    <i class="fa-solid fa-heart"></i>
+
+</a>
+
+     <a href="cart.html" class="cart-btn">
+
+       <i class="fa-solid fa-cart-shopping"></i>
+
+     </a>
+
+
+     </div>
+
+    </nav>
+
+   </header>
+
+
+<main>
+
+
+   <section class="page-banner">
+
+    <span class="page-subtitle">
+    COLLECTION
+</span>
+
+<h1>
+    Seeds
+</h1>
+
+<p>
+    Browse our premium seed collection, selected to ensure successful planting and healthy growth for every garden.
+</p>
+
+</section>
+
+<section class="products-section">
+
+    <div class="section-header">
+
+        
+
+        <span id="products-count"></span>
+
+    </div>
+
+    <div id="products-grid" class="products-grid">
+
+    </div>
+
+</section>
+
+</main>
+
+
+
+
+
+   
+
+
+
+    <!--=================================
+            FOOTER
+==================================-->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-about">
+
+            <h2 class="footer-logo">
+
+                Luna<span class="rose">Rose</span>
+
+            </h2>
+
+            <p>
+
+                Bringing nature closer to every home with premium plants,
+                carefully selected to inspire greener and healthier living.
+
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Quick Links</h3>
+
+            <ul>
+
+                <li><a href="../html/index.html">Home</a></li>
+
+                <li><a href="../html/profile.html">Profile</a></li>
+
+                <li><a href="../html/favorites.html">Favorites</a></li>
+
+                <li><a href="../html/cart.html">Cart</a></li>
+
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h3>Categories</h3>
+
+            <ul>
+
+                <li><a href="../html/ornamental.html">Ornamental</a></li>
+
+                <li><a href="../html/medicinal.html">Medicinal</a></li>
+
+                <li><a href="../html/seedlings.html">Seedlings</a></li>
+
+                <li><a href="../html/seeds.html">Seeds</a></li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-contact">
+
+            <h3>Get in touch</h3>
+
+            <p>
+    Email :
+    <a href="mailto:info@lunarose.com">
+        info@lunarose.com
+       </a>
+    </p>
+
+           <p>
+    Phone :
+    <a href="tel:+213555000000">
+        +213 555 000 000
+    </a>
+</p>
+
+            <div class="footer-social">
+
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+
+                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        
+        Designed & Developed by Rahmani Abdallah • © 2026 LunaRose
+
+    </div>
+
+</footer>
+
+
+
+    <script src="../js/products.js"></script>
+    <script src="../js/main.js"></script>
+
+
+
+<script>
+
+renderCategoryPage(
+
+    CATEGORY.SEEDS,
+
+    "products-grid"
+
+);
+
+</script>
+
+<script>
+
+renderCategoryPage(CATEGORY.SEEDS,"products-grid");
+
+document.querySelectorAll(".product-image img").forEach(image=>{
+
+    image.addEventListener("mouseenter",()=>{
+
+        image.style.opacity="0";
+
+        setTimeout(()=>{
+
+            image.src=image.dataset.hover;
+
+            image.style.opacity="1";
+
+        },150);
+
+    });
+
+    image.addEventListener("mouseleave",()=>{
+
+        image.style.opacity="0";
+
+        setTimeout(()=>{
+
+            image.src=image.dataset.normal;
+
+            image.style.opacity="1";
+
+        },150);
+
+    });
+
+});
+
+</script>
+
+
+
+
+
+</body>
+
+
+</html>
+
+
+
+
+
