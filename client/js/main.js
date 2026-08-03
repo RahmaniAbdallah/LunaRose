@@ -1461,9 +1461,9 @@ async function setupDetailsModal(product) {
 
         try {
 
-            const response = await fetch(
-                `http://localhost:5000/api/details/${product.id}`
-            );
+           const response = await fetch(
+    `/api/details/${product.id}`
+);
 
             const details = await response.json();
 
