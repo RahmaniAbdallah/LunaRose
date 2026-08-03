@@ -44,11 +44,17 @@ app.use("/api/details", productDetailsRoutes);
  
 
 
+  //   app.get("/", (req, res) => {
+
+  //  res.sendFile(path.join(__dirname, "../client/html/index.html"));
+
+ //  });
+   
+
 app.get("/", (req, res) => {
-
-    res.sendFile(path.join(__dirname, "../client/html/index.html"));
-
+    res.redirect("/html/index.html");
 });
+
 
 
 module.exports = app;
