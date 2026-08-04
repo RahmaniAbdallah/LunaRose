@@ -170,6 +170,8 @@ color: #Ae3d33;
     font-size: 1rem;
 
     background-color: var(--card-color);
+
+    border-radius: 8px 0 0 8px;
 }
 
 .search-input::placeholder {
@@ -3653,4 +3655,27 @@ overflow: hidden;
     text-align: center;
     color: #777;
     font-size: 0.95rem;
+}
+
+
+
+/* =========================
+   Custom Scrollbar for Suggestions
+========================= */
+.search-suggestions::-webkit-scrollbar {
+    width: 8px;
+}
+
+.search-suggestions::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 0 12px 12px 0;  
+}
+
+.search-suggestions::-webkit-scrollbar-thumb {
+    background: #c1c1c1; 
+    border-radius: 10px;  
+}
+
+.search-suggestions::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary-color);  
 }
