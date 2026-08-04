@@ -3545,23 +3545,28 @@ overflow: hidden;
 }
 
 
-
-/*=================================
-        SCROLLBAR
-==================================*/
-
-.details-modal-content::-webkit-scrollbar{
-
-    width:8px;
-
+/* =================================
+        SCROLLBAR (Details Modal)
+================================== */
+.details-modal-content::-webkit-scrollbar {
+    width: 14px;
 }
 
-.details-modal-content::-webkit-scrollbar-thumb{
+.details-modal-content::-webkit-scrollbar-track {
+    background: transparent;
+}
 
-    background:var(--primary-color);
+.details-modal-content::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+    border: 3px solid transparent;
+    background-clip: padding-box;
+}
 
-    border-radius:20px;
-
+.details-modal-content::-webkit-scrollbar-thumb:hover {
+    background-color: var(--hover-color);
+    border: 3px solid transparent;
+    background-clip: padding-box;
 }
 
 
@@ -3658,24 +3663,29 @@ overflow: hidden;
 }
 
 
-
 /* =========================
    Custom Scrollbar for Suggestions
 ========================= */
 .search-suggestions::-webkit-scrollbar {
-    width: 8px;
+    width: 14px;  
 }
 
 .search-suggestions::-webkit-scrollbar-track {
     background: transparent;
-    border-radius: 0 12px 12px 0;  
 }
 
 .search-suggestions::-webkit-scrollbar-thumb {
-    background: #c1c1c1; 
-    border-radius: 10px;  
+    background-color: var(--primary-color); 
+    border-radius: 10px;
+    border: 3px solid transparent;  
+    background-clip: padding-box; 
 }
 
 .search-suggestions::-webkit-scrollbar-thumb:hover {
-    background: var(--secondary-color);  
+    background-color: var(--hover-color);
+    border: 3px solid transparent;
+    background-clip: padding-box;
 }
+
+
+
