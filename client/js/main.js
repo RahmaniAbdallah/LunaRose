@@ -1587,3 +1587,24 @@ searchInputs.forEach(input => {
     });
 });
 
+
+
+
+
+
+// ==============================
+// PRELOAD HOVER IMAGES
+// ==============================
+function preloadHoverImages(productsArray) {
+    productsArray.forEach(product => {
+        // نتحقق من وجود صورة ثانية للمنتج لتفادي أي خطأ برمجي
+        if (product.images && product.images.length > 1) {
+            const preloadImg = new Image();
+            preloadImg.src = product.images[1]; // هذا السطر يجبر المتصفح على تحميل الصورة في الكاش بصمت
+        }
+    });
+}
+
+// استدعِ هذه الدالة بعد أن تكون قائمة المنتجات جاهزة
+
+preloadHoverImages(products);
