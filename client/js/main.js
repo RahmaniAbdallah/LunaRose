@@ -1610,3 +1610,28 @@ function preloadHoverImages() {
 
 // تشغيل التحميل التلقائي فور فتح الصفحة
 preloadHoverImages();
+
+
+
+
+
+
+/*==============================
+   TOGGLE PASSWORD VISIBILITY
+==============================*/
+const togglePasswordIcons = document.querySelectorAll(".toggle-password");
+
+togglePasswordIcons.forEach(icon => {
+    icon.addEventListener("click", function () {
+        // تحديد حقل الإدخال المرتبط بهذه الأيقونة
+        const input = this.previousElementSibling;
+        
+        // التبديل بين إظهار وإخفاء النص
+        const type = input.getAttribute("type") === "password" ? "text" : "password";
+        input.setAttribute("type", type);
+        
+        // تغيير شكل الأيقونة (عين مفتوحة / عين مغلقة)
+        this.classList.toggle("fa-eye");
+        this.classList.toggle("fa-eye-slash");
+    });
+});

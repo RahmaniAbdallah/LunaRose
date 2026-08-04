@@ -3690,3 +3690,42 @@ overflow: hidden;
 
 
 
+
+/* =========================
+   Password Toggle Icon
+========================= */
+.password-container {
+    position: relative;
+    width: 100%;
+}
+
+.password-container input {
+    width: 100%;
+    padding-right: 45px; /* ترك مساحة للأيقونة حتى لا يغطيها النص */
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
+}
+
+.toggle-password:hover {
+    color: var(--primary-color);
+}
+
+
+
+
+/* =========================
+   Hide Browser Default Password Eye
+========================= */
+input[type="password"]::-ms-reveal,
+input[type="password"]::-ms-clear {
+    display: none;
+}
