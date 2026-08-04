@@ -3554,6 +3554,7 @@ overflow: hidden;
 
 .details-modal-content::-webkit-scrollbar-track {
     background: transparent;
+    margin-block: 15px ;
 }
 
 .details-modal-content::-webkit-scrollbar-thumb {
