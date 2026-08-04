@@ -3731,3 +3731,81 @@ input[type="password"]::-ms-reveal,
 input[type="password"]::-ms-clear {
     display: none;
 }
+
+
+
+ 
+
+/* =========================================
+   LOGOUT MODAL - FULL DESIGN & POSITION
+========================================= */
+
+/* 1. التموضع: نخبوه من التحت ونردوه نافذة عائمة */
+#logout-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* خلفية نصف شفافة */
+    z-index: 9999;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+/* ظهور النافذة كي تكليكي */
+#logout-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 2. التصميم الداخلي (يطابق الـ Favorites) */
+#logout-modal .modal-content {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+#logout-modal.active .modal-content {
+    transform: scale(1);
+}
+
+#logout-modal .modal-icon {
+    margin-bottom: 10px;
+}
+
+/* 3. تنسيق الأزرار */
+#logout-modal .modal-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+#logout-modal .modal-buttons button {
+    padding: 10px 22px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+#logout-modal .modal-buttons button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}

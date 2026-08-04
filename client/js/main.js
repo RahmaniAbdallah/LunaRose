@@ -274,21 +274,15 @@ if (loginLink && registerLink) {
         registerLink.href = "#";
 
         registerLink.addEventListener("click", (e) => {
-
-            e.preventDefault();
-
-            const confirmLogout = confirm(
-                "Are you sure you want to logout?"
-            );
-
-            if (!confirmLogout) return;
-
-            localStorage.removeItem("token");
-            localStorage.removeItem("currentUser");
-
-            window.location.href = "index.html";
-
-        });
+    
+    e.preventDefault();
+    
+    const logoutModal = document.getElementById("logout-modal");
+    if (logoutModal) {
+        logoutModal.classList.add("active"); // تم التغيير هنا للإظهار
+    }
+    
+});
 
     } else {
 
@@ -1268,7 +1262,7 @@ loadProfile();
 
 /*==============================
         Logout
-==============================*/
+==============================
 
 const logoutBtn = document.getElementById("logout-btn");
 
@@ -1286,7 +1280,7 @@ localStorage.removeItem("token");
     window.location.href = "index.html";
 
 });
-
+*/
 
 /*==============================
         Edit Profile
@@ -1635,3 +1629,37 @@ togglePasswordIcons.forEach(icon => {
         this.classList.toggle("fa-eye-slash");
     });
 });
+
+
+
+
+
+
+/*==============================
+        LOGOUT MODAL LOGIC
+==============================*/
+const logoutModal = document.getElementById("logout-modal");
+const stayBtn = document.getElementById("stay-btn");
+const confirmLogoutBtn = document.getElementById("confirm-logout-btn");
+
+if (logoutModal && stayBtn && confirmLogoutBtn) {
+    
+    // إذا كليكا على الزر الأخضر (يبقى في الموقع)
+    stayBtn.addEventListener("click", () => {
+        logoutModal.classList.remove("active"); // تم التغيير هنا للإخفاء
+    });
+
+    // إذا كليكا على الزر الأحمر (يخرج صح)
+    confirmLogoutBtn.addEventListener("click", () => {
+        localStorage.removeItem("token");
+        localStorage.removeItem("currentUser");
+        window.location.href = "index.html"; 
+    });
+
+    // باش كي يكليكي برا الـ Modal يتغلق
+    logoutModal.addEventListener("click", (e) => {
+        if (e.target === logoutModal) {
+            logoutModal.classList.remove("active"); // تم التغيير هنا للإخفاء
+        }
+    });
+}
