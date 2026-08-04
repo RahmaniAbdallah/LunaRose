@@ -1526,3 +1526,64 @@ async function setupDetailsModal(product) {
     });
 
 }
+
+
+
+
+
+// ==============================
+// SEARCH SUGGESTIONS (Live Search)
+// ==============================
+const searchInputs = document.querySelectorAll(".search-input");
+
+searchInputs.forEach(input => {
+    const container = input.closest(".search");
+    if (!container) return;
+
+    // Create the suggestions container dynamically
+    const suggestionsBox = document.createElement("div");
+    suggestionsBox.className = "search-suggestions";
+    container.appendChild(suggestionsBox);
+
+    input.addEventListener("input", (e) => {
+        const query = e.target.value.trim().toLowerCase();
+        
+        // Hide if the input is empty
+        if (query.length === 0) {
+            suggestionsBox.classList.remove("show");
+            return;
+        }
+
+        // Filter products that include the searched letters
+        const filteredProducts = products.filter(product => 
+            product.name.toLowerCase().includes(query) ||
+            product.category.toLowerCase().includes(query)
+        );
+
+        // Render results
+        if (filteredProducts.length > 0) {
+            suggestionsBox.innerHTML = filteredProducts.map(product => `
+                <a href="product.html?id=${product.id}" class="suggestion-item">
+                    <img src="${product.images[0]}" alt="${product.name}">
+                    <span>${product.name}</span>
+                </a>
+            `).join("");
+        } else {
+            suggestionsBox.innerHTML = `
+                <div class="suggestion-empty">
+                    No plants found for "${e.target.value}"...
+                </div>
+            `;
+        }
+        
+        suggestionsBox.classList.add("show");
+    });
+
+    // Hide suggestions when clicking anywhere outside the search bar
+    document.addEventListener("click", (e) => {
+        if (!container.contains(e.target)) {
+            suggestionsBox.classList.remove("show");
+        }
+    });
+});
+
