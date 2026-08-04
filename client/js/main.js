@@ -590,36 +590,33 @@ async function initializeFavorite() {
     }
 
 }
-
-   favoriteBtn.addEventListener("click", async () => {
-
-    try {
-
-        const favorites = await getFavorites();
-
-        if (favorites.includes(product.id)) {
-
-            await removeFavorite(product.id);
-
-            updateFavoriteUI(false);
-
-        } else {
-
-            await addFavorite(product.id);
-
-            updateFavoriteUI(true);
-
-        }
-
-    } catch (error) {
-
-        console.error(error);
-
-      showToast("Please login first.", "warning");
-
+favoriteBtn.addEventListener("click", async () => {
+    const token = localStorage.getItem("token");
+    
+    // إذا ماكانش عندو توكن، نخرجولو toast تحذير أصفر
+    if (!token) {
+        showToast("Please login first to add to favorites.", "warning");
+        return;
     }
 
+    try {
+        const favorites = await getFavorites();
+        if (favorites.includes(product.id)) {
+            await removeFavorite(product.id);
+            updateFavoriteUI(false);
+        } else {
+            await addFavorite(product.id);
+            updateFavoriteUI(true);
+        }
+    } catch (error) {
+        console.error(error);
+        showToast("Something went wrong.", "error");
+    }
 });
+
+
+
+
 
     function updateFavoriteUI(favorite){
 
@@ -979,24 +976,24 @@ if (window.location.pathname.includes("cart.html")) {
     
 
 }
- 
 
-async function addToCart(productId) {
 
-    try {
-
-        await addCart(productId);
-
-        showToast("Product added to cart!");
-
-    } catch (error) {
-
-        console.error(error);
-
-       showToast("Please login first.", "warning");
-
+ async function addToCart(productId) {
+    const token = localStorage.getItem("token");
+    
+    // إذا ماكانش عندو توكن، نخرجولو toast أحمر ونحبسو الدالة
+    if (!token) {
+        showToast("Please login first to add to cart.", "error");
+        return;
     }
 
+    try {
+        await addCart(productId);
+        showToast("Product added to cart!", "success");
+    } catch (error) {
+        console.error(error);
+        showToast("Something went wrong.", "error");
+    }
 }
 
 
@@ -1020,31 +1017,37 @@ async function addToCart(productId) {
   //   }
 
 
-
-
 function showToast(message, type = "success") {
-
     const toast = document.getElementById("toast");
     const text = document.getElementById("toast-message");
+    const icon = toast.querySelector("i"); // جلب الأيقونة الموجودة داخل الـ toast
 
     if (!toast || !text) return;
 
     text.textContent = message;
 
+    // تنظيف الكلاسات القديمة
     toast.classList.remove("success", "error", "warning");
-
     toast.classList.add(type);
+
+    // تغيير الأيقونة حسب نوع التنبيه
+    if (icon) {
+        icon.className = ""; // تنظيف الأيقونة القديمة
+        if (type === "success") {
+            icon.className = "fa-solid fa-check-circle"; // علامة الصح
+        } else if (type === "warning") {
+            icon.className = "fa-solid fa-triangle-exclamation"; // علامة التحذير ⚠️
+        } else if (type === "error") {
+            icon.className = "fa-solid fa-circle-exclamation"; // علامة الخطأ ❗
+        }
+    }
 
     toast.classList.add("show");
 
     clearTimeout(toast.timeout);
-
     toast.timeout = setTimeout(() => {
-
         toast.classList.remove("show");
-
     }, 2500);
-
 }
 
 

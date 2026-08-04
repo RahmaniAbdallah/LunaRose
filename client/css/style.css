@@ -2207,27 +2207,29 @@ overflow: hidden;
 
 }
 
-
-.toast.success{
-
-    background:#2e7d32;
-
+/* =========================
+   Toast Colors & Icons
+========================= */
+/* الأخضر العادي للنجاح */
+#toast.success {
+    background-color: #2e7d32; /* أخضر طبيعي */
+    color: #ffffff;
 }
+#toast.success i { color: #a5d6a7; } /* أيقونة خضراء فاتحة شوية باش تبان */
 
-.toast.error{
-
-    background:#c62828;
-
+/* الأصفر/البرتقالي للتحذير (Favorites) */
+#toast.warning {
+    background-color: #f6c23e; /* أصفر ناعم */
+    color: #333333; /* خط رمادي داكن باش يبان مليح فوق الأصفر */
 }
+#toast.warning i { color: #333333; }
 
-.toast.warning{
-
-    background:#f9a825;
-
-    color:#111;
-
+/* الأحمر الفاتح للخطأ (Cart) */
+#toast.error {
+    background-color: #e74a3b; /* أحمر ناعم ومطفي (ماشي فونصي) */
+    color: #ffffff; /* خط أبيض باش يكون التباين مثالي */
 }
-
+#toast.error i { color: #ffccd5; } /* الأيقونة بلون وردي فاتح جداً */
 
 
 
