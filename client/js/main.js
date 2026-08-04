@@ -1016,29 +1016,29 @@ if (window.location.pathname.includes("cart.html")) {
 
   //   }
 
-
 function showToast(message, type = "success") {
     const toast = document.getElementById("toast");
     const text = document.getElementById("toast-message");
-    const icon = toast.querySelector("i"); // جلب الأيقونة الموجودة داخل الـ toast
 
+    // 1. الحماية أولاً: يجب التأكد من وجود العنصر قبل أي إجراء لمنع توقف الكود (Crash)
     if (!toast || !text) return;
+
+    // 2. الآن يمكننا البحث عن الأيقونة وتغييرها بأمان
+    const icon = toast.querySelector("i");
 
     text.textContent = message;
 
-    // تنظيف الكلاسات القديمة
     toast.classList.remove("success", "error", "warning");
     toast.classList.add(type);
 
-    // تغيير الأيقونة حسب نوع التنبيه
     if (icon) {
-        icon.className = ""; // تنظيف الأيقونة القديمة
+        icon.className = "";
         if (type === "success") {
-            icon.className = "fa-solid fa-check-circle"; // علامة الصح
+            icon.className = "fa-solid fa-check-circle";
         } else if (type === "warning") {
-            icon.className = "fa-solid fa-triangle-exclamation"; // علامة التحذير ⚠️
+            icon.className = "fa-solid fa-triangle-exclamation";
         } else if (type === "error") {
-            icon.className = "fa-solid fa-circle-exclamation"; // علامة الخطأ ❗
+            icon.className = "fa-solid fa-circle-exclamation";
         }
     }
 
@@ -1049,9 +1049,6 @@ function showToast(message, type = "success") {
         toast.classList.remove("show");
     }, 2500);
 }
-
-
-
 
 
 
