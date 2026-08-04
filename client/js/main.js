@@ -1591,20 +1591,22 @@ searchInputs.forEach(input => {
 
 
 
-
 // ==============================
-// PRELOAD HOVER IMAGES
+// PRELOAD HOVER IMAGES (Automatic)
 // ==============================
-function preloadHoverImages(productsArray) {
-    productsArray.forEach(product => {
-        // نتحقق من وجود صورة ثانية للمنتج لتفادي أي خطأ برمجي
-        if (product.images && product.images.length > 1) {
-            const preloadImg = new Image();
-            preloadImg.src = product.images[1]; // هذا السطر يجبر المتصفح على تحميل الصورة في الكاش بصمت
+function preloadHoverImages() {
+    // ننتظر قليلاً بعد تحميل DOM لضمان وجود المنتجات
+    setTimeout(() => {
+        if (typeof products !== "undefined" && Array.isArray(products)) {
+            products.forEach(product => {
+                if (product.images && product.images.length > 1) {
+                    const img = new Image();
+                    img.src = product.images[1]; // تحميل الصورة الثانية مسبقاً في الكاش
+                }
+            });
         }
-    });
+    }, 500);
 }
 
-// استدعِ هذه الدالة بعد أن تكون قائمة المنتجات جاهزة
-
-preloadHoverImages(products);
+// تشغيل التحميل التلقائي فور فتح الصفحة
+preloadHoverImages();
